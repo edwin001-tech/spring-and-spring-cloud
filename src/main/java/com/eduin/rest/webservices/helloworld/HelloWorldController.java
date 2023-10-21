@@ -1,4 +1,4 @@
-package com.eduin.rest.webservices;
+package com.eduin.rest.webservices.helloworld;
 
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,6 +24,7 @@ public class HelloWorldController {
 		return new HelloWorldBean("Hello World");
 	}
 	
+	//GET http://localhost:8080/hello-world/path-variable/this-is-edwin
 	@RequestMapping(method = RequestMethod.GET, path = "/hello-world/path-variable/{name}")
 	public HelloWorldBean helloWorldPathVariable(@PathVariable String name ) {
 		return new HelloWorldBean(String.format("Hello World, %s", name));

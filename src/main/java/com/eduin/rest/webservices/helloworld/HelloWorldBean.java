@@ -1,4 +1,4 @@
-package com.eduin.rest.webservices;
+package com.eduin.rest.webservices.helloworld;
 
 public class HelloWorldBean {
 	
