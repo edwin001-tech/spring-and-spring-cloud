@@ -2,10 +2,17 @@ package com.eduin.rest.webservices.user;
 
 import java.util.Date;
 
+import jakarta.validation.constraints.Past;
+import jakarta.validation.constraints.Size;
+
+
 public class User {
 	
 	public Integer id;
+	
+	@Size(min=2)
 	public String name;
+	@Past
 	private Date birthDate;
 	
 	protected User() {
