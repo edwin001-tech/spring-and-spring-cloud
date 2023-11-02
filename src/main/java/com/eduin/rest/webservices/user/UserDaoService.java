@@ -2,6 +2,7 @@ package com.eduin.rest.webservices.user;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Iterator;
 import java.util.List;
 
 import org.springframework.stereotype.Component;
@@ -41,6 +42,21 @@ public class UserDaoService {
 		return null;
 		
 		
+	}
+	
+	public User deleteById(int Id){
+		Iterator<User>iterator = users.iterator();
+		
+		while(iterator.hasNext()) {
+			User user = iterator.next();
+		if(user.getId() == Id) {
+			iterator.remove();
+			return user;
+		}
+			
+	}
+		return null;
+	
 	}
 		
 	
